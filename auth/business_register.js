@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const business_register = asyncHandler(async (req, res, next) => {
     const { business_name, business_type, food_type, open_days_per_weak } = req.body;
 
-    if (!business_name || !business_type || !food_type || !open_days_per_weak) {
+    if (!business_name || !business_type ||  !open_days_per_weak) {
         return res.status(400).json({ error: `All fields are required` });
     }
 
